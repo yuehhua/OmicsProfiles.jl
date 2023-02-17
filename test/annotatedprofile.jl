@@ -14,6 +14,7 @@
 
     @test nvar(ap, :RNA) == ngenes
     @test nobs(ap) == ncells
+    @test nmodal(ap) == 1
 
     ap.obs[!, :newindex] = collect(ncells:-1:1)
     ap.obsindex = :newindex

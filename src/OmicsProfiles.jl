@@ -42,6 +42,7 @@ export
     obsnames,
     omicsnames,
     nobs,
+    nmodal,
     getobsindex,
     setobsindex!
 

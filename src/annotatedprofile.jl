@@ -62,6 +62,7 @@ pipelinenames(p::AnnotatedProfile) = keys(getfield(p, :pipeline))
 
 nvar(p::AnnotatedProfile, omicsname::Symbol) = nvar(p.omics[omicsname])
 nobs(p::AnnotatedProfile) = nrow(p.obs)
+nmodal(p::AnnotatedProfile) = length(keys(p.omics))
 
 function Base.show(io::IO, p::AnnotatedProfile)
     print(io, "AnnotatedProfile (nobs = ", nobs(p), "):")
